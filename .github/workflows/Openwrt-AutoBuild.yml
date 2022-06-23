@@ -72,9 +72,6 @@ jobs:
         if [ ${{matrix.target}} == "x86_64" ]; then
             echo "ARCH=linux/amd64" >> $GITHUB_ENV
             echo "MTARGET=x86_64" >> $GITHUB_ENV
-        else
-            if [[ ${{matrix.target}} == "ramips_mt7621" ]]; then
-                echo "MTARGET=mipsel_24kc" >> $GITHUB_ENV
         fi
 
     - name: Trigger Packages Update
